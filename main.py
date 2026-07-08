@@ -285,6 +285,7 @@ async def on_app_command_error(interaction: discord.Interaction, error: app_comm
 
 if __name__ == "__main__":
     if not TOKEN:
-        print("ERROR CRÍTICO: Falta el BOT_TOKEN en las variables de Render.")
+        print("❌ ERROR CRÍTICO: Falta la variable BOT_TOKEN en el entorno de Render.")
     else:
         bot.run(TOKEN)
+        
