@@ -1,5 +1,5 @@
 import os
-import discord
+import discord.py
 from discord import app_commands
 from discord.ext import commands, tasks
 from discord.ui import Button, View
