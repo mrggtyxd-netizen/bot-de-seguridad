@@ -8,6 +8,21 @@ import time
 import re
 from datetime import datetime
 
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "¡Bot de Seguridad Activo y Operando 24/7!"
+
+def run_web_server():
+    # Render asigna automáticamente un puerto en la variable PORT
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host='0.0.0.0', port=port)
+
+def keep_alive():
+    t = Thread(target=run_web_server)
+    t.start()
+
 TOKEN = os.getenv("BOT_TOKEN")
 ALERT_CHANNEL_NAME = "alertas-seguridad"
 
